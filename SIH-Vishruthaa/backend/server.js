@@ -12,10 +12,14 @@ dotenv.config();
 
 const app = express();
 
+const authRoutes = require("./routes/auth");
+
 app.use(cors());
 app.use(express.json());
 
 connectDB();
+
+app.use("/api/auth", authRoutes);
 
 app.get("/", (req, res) => {
     res.json({

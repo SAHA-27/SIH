@@ -640,12 +640,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. SIH 2026 PRESENTATION BANNER */}
+      {/* 7. INNOVATION SHOWCASE BANNER */}
       <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="relative rounded-3xl border border-cyan-500/30 bg-gradient-to-r from-cyan-950/40 via-indigo-950/50 to-purple-950/40 p-8 sm:p-12 text-center overflow-hidden shadow-2xl">
           <div className="relative z-10 max-w-3xl mx-auto space-y-4">
             <span className="rounded-full bg-cyan-500/20 px-3 py-1 text-xs font-bold text-cyan-300 border border-cyan-400/30">
-              SIH 2026 Innovation Showcase
+              Interactive Innovation Showcase
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
               Ready to Master Quantum Computing?

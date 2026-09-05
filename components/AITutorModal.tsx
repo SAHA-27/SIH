@@ -283,7 +283,7 @@ export default function AITutorModal() {
                 </button>
               </form>
               <div className="mt-2 text-center text-[10px] text-slate-400">
-                SIH 2026 AI Quantum Knowledge Engine • Instant Explanations
+                AI Quantum Knowledge Engine • Instant Explanations
               </div>
             </div>
           </div>

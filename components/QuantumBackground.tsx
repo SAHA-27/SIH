@@ -108,18 +108,18 @@ export default function QuantumBackground() {
   }, []);
 
   return (
-    <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-[#050814]">
+    <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-[#050814] dark:bg-[#050814] light:bg-[#f8fafc] transition-colors duration-300">
       {/* Background Tech Grid */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-60" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-60 dark:opacity-60 light:opacity-20" />
 
       {/* Layered Radial Glow Orbs */}
-      <div className="absolute -top-40 left-1/4 h-[550px] w-[550px] rounded-full bg-cyan-600/10 blur-[130px]" />
-      <div className="absolute top-1/3 -right-20 h-[600px] w-[600px] rounded-full bg-indigo-600/10 blur-[150px]" />
-      <div className="absolute -bottom-32 left-1/3 h-[500px] w-[500px] rounded-full bg-purple-600/10 blur-[140px]" />
+      <div className="absolute -top-40 left-1/4 h-[550px] w-[550px] rounded-full bg-cyan-600/10 dark:bg-cyan-600/10 light:bg-cyan-500/5 blur-[130px]" />
+      <div className="absolute top-1/3 -right-20 h-[600px] w-[600px] rounded-full bg-indigo-600/10 dark:bg-indigo-600/10 light:bg-indigo-500/5 blur-[150px]" />
+      <div className="absolute -bottom-32 left-1/3 h-[500px] w-[500px] rounded-full bg-purple-600/10 dark:bg-purple-600/10 light:bg-purple-500/5 blur-[140px]" />
 
       {/* Subtle Quantum Wave Curve */}
       <svg
-        className="absolute top-0 left-0 h-full w-full opacity-15"
+        className="absolute top-0 left-0 h-full w-full opacity-15 dark:opacity-15 light:opacity-5"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 900"
         preserveAspectRatio="none"
@@ -138,7 +138,7 @@ export default function QuantumBackground() {
       </svg>
 
       {/* Interactive Particle Network Canvas */}
-      <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
+      <canvas ref={canvasRef} className="absolute inset-0 h-full w-full opacity-100 dark:opacity-100 light:opacity-40" />
     </div>
   );
 }

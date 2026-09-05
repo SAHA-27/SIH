@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import type { MouseEvent } from "react";
 import { Sparkles, RotateCw, Play, Info } from "lucide-react";
 
 interface BlochSphereProps {

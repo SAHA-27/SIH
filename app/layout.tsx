@@ -5,6 +5,7 @@ import QuantumBackground from "@/components/QuantumBackground";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AITutorModal from "@/components/AITutorModal";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +20,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Quantum xplore",
   description:
-    "Learn quantum concepts, build quantum circuits, run simulations, visualize the Bloch Sphere, and interact with an AI Quantum Tutor for SIH 2026.",
+    "Learn quantum concepts, build quantum circuits, run simulations, visualize the Bloch Sphere, and interact with an AI Quantum Tutor.",
 };
 
 export default function RootLayout({
@@ -33,11 +34,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col bg-[#050814] text-slate-100 selection:bg-cyan-500/30 selection:text-cyan-200">
-        <QuantumBackground />
-        <Navbar />
-        <main className="flex-1 flex flex-col">{children}</main>
-        <Footer />
-        <AITutorModal />
+        <ThemeProvider>
+          <QuantumBackground />
+          <Navbar />
+          <main className="flex-1 flex flex-col">{children}</main>
+          <Footer />
+          <AITutorModal />
+        </ThemeProvider>
       </body>
     </html>
   );

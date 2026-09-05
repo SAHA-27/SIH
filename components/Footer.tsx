@@ -16,7 +16,7 @@ export default function Footer() {
                 Quantum<span className="text-cyan-400">Explorer</span>
               </span>
               <span className="rounded-full bg-cyan-500/10 px-2 py-0.5 text-[10px] font-bold text-cyan-400 border border-cyan-500/30">
-                SIH 2026
+                Active Platform
               </span>
             </div>
 
@@ -105,7 +105,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-indigo-950 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-center sm:text-left">
             <p className="text-sm font-semibold text-slate-300">
-              Quantum Explorer • SIH 2026
+              Quantum Explorer Platform
             </p>
             <p className="text-xs text-slate-500 mt-0.5">
               Learn • Build • Simulate • Explore
