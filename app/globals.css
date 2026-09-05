@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050814;
+  --foreground: #f1f5f9;
+  --navy-base: #050814;
+  --navy-surface: #0a0f29;
+  --navy-card: rgba(13, 21, 58, 0.65);
+  --cyan-glow: #00f0ff;
+  --purple-glow: #a855f7;
+  --indigo-glow: #6366f1;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+body {
+  background-color: #050814;
+  color: #f1f5f9;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070c20;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e2954;
+  border-radius: 9999px;
+  border: 2px solid #070c20;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: rgba(10, 16, 46, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(13, 21, 58, 0.75) 0%, rgba(8, 14, 38, 0.85) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(99, 102, 241, 0.16);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -10px rgba(6, 182, 212, 0.2), 0 0 20px -5px rgba(99, 102, 241, 0.25);
+}
+
+.glass-card-interactive {
+  background: linear-gradient(135deg, rgba(15, 23, 64, 0.6) 0%, rgba(10, 15, 40, 0.75) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s ease;
+}
+
+.glass-card-interactive:hover {
+  background: linear-gradient(135deg, rgba(20, 32, 85, 0.7) 0%, rgba(14, 22, 58, 0.85) 100%);
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+/* Gradient Text */
+.gradient-text-cyan {
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-purple {
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-glow {
+  background: linear-gradient(135deg, #ffffff 20%, #7dd3fc 60%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glowing Elements & Borders */
+.glow-cyan {
+  box-shadow: 0 0 25px -3px rgba(6, 182, 212, 0.35);
+}
+
+.glow-purple {
+  box-shadow: 0 0 25px -3px rgba(168, 85, 247, 0.35);
+}
+
+.glow-subtle {
+  box-shadow: 0 0 40px -10px rgba(56, 189, 248, 0.15);
+}
+
+/* Tech Grid Pattern */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle at 50% 0%, rgba(30, 58, 138, 0.35) 0%, rgba(5, 8, 20, 0) 70%);
+}
+
+/* Quantum Circuit Pulse Animation */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.3));
+  }
+  50% {
+    opacity: 0.9;
+    filter: drop-shadow(0 0 16px rgba(56, 189, 248, 0.7));
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes waveOscillate {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.4);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spinSlow 25s linear infinite reverse;
+}
