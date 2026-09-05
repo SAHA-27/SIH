@@ -50,10 +50,9 @@ export default function Navbar() {
           <div className="flex flex-col">
             <div className="flex items-center gap-2">
               <span className="text-xl font-extrabold tracking-tight text-white group-hover:text-cyan-300 transition-colors">
-                Quantum<span className="text-cyan-400">Explorer</span>
+                Quantum<span className="text-cyan-400">xplore</span>
               </span>
               <span className="hidden sm:inline-block rounded-full bg-cyan-500/10 px-2 py-0.5 text-[10px] font-bold text-cyan-400 border border-cyan-500/30">
-                SIH 2026
               </span>
             </div>
             <span className="text-[10px] text-slate-400 tracking-wider uppercase font-medium">
