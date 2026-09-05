@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Quantum Explorer | AI-Powered Quantum Computing Learning Platform",
+  title: "Quantum xplore",
   description:
     "Learn quantum concepts, build quantum circuits, run simulations, visualize the Bloch Sphere, and interact with an AI Quantum Tutor for SIH 2026.",
 };
