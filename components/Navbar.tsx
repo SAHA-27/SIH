@@ -14,7 +14,9 @@ import {
   X, 
   Flame, 
   Sparkles,
-  ChevronRight
+  ChevronRight,
+  LogIn,
+  UserPlus
 } from "lucide-react";
 
 export default function Navbar() {
@@ -50,9 +52,10 @@ export default function Navbar() {
           <div className="flex flex-col">
             <div className="flex items-center gap-2">
               <span className="text-xl font-extrabold tracking-tight text-white group-hover:text-cyan-300 transition-colors">
-                Quantum<span className="text-cyan-400">xplore</span>
+                Quantum<span className="text-cyan-400">Explorer</span>
               </span>
               <span className="hidden sm:inline-block rounded-full bg-cyan-500/10 px-2 py-0.5 text-[10px] font-bold text-cyan-400 border border-cyan-500/30">
+                SIH 2026
               </span>
             </div>
             <span className="text-[10px] text-slate-400 tracking-wider uppercase font-medium">
@@ -97,17 +100,31 @@ export default function Navbar() {
           {/* AI Tutor Button */}
           <button
             onClick={handleOpenAITutor}
-            className="flex items-center gap-2 rounded-xl border border-cyan-500/40 bg-gradient-to-r from-cyan-500/15 via-indigo-500/15 to-purple-500/15 px-3.5 py-2 text-sm font-semibold text-cyan-300 shadow-sm transition hover:border-cyan-300 hover:bg-cyan-500/25 hover:text-white"
+            className="flex items-center gap-2 rounded-xl border border-cyan-500/40 bg-gradient-to-r from-cyan-500/15 via-indigo-500/15 to-purple-500/15 px-3 py-2 text-xs font-semibold text-cyan-300 shadow-sm transition hover:border-cyan-300 hover:bg-cyan-500/25 hover:text-white"
           >
             <Bot className="h-4 w-4 text-cyan-400" />
             <span>AI Tutor</span>
             <Sparkles className="h-3 w-3 text-cyan-300 animate-pulse" />
           </button>
 
-          {/* Student Profile Avatar */}
+          {/* Auth: Sign In & Sign Up / Dashboard */}
+          <Link
+            href="/login"
+            className={`flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-semibold transition ${
+              pathname === "/login"
+                ? "bg-cyan-500/20 text-cyan-300 border border-cyan-400/40"
+                : "text-slate-300 hover:text-white hover:bg-slate-800/60"
+            }`}
+          >
+            <LogIn className="h-3.5 w-3.5" />
+            <span>Sign In</span>
+          </Link>
+
+          {/* Student Profile Avatar / Dashboard Link */}
           <Link
             href="/dashboard"
             className="flex items-center gap-2.5 rounded-xl border border-indigo-500/20 bg-slate-900/80 p-1.5 pr-3 hover:border-cyan-400/40 transition"
+            title="Go to Dashboard"
           >
             <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-tr from-cyan-500 to-indigo-600 text-xs font-bold text-slate-950">
               QE
@@ -121,6 +138,14 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <div className="flex items-center gap-2 md:hidden">
+          <Link
+            href="/login"
+            className="flex h-9 items-center gap-1.5 rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-2.5 text-xs font-semibold text-cyan-400"
+          >
+            <LogIn className="h-3.5 w-3.5" />
+            <span>Login</span>
+          </Link>
+
           <button
             onClick={handleOpenAITutor}
             className="flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-cyan-400"
@@ -164,13 +189,32 @@ export default function Navbar() {
             );
           })}
 
-          <div className="pt-3 flex gap-2">
+          <div className="pt-3 grid grid-cols-2 gap-2">
+            <Link
+              href="/login"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center justify-center gap-1.5 rounded-xl border border-slate-700 bg-slate-900 py-2.5 text-xs font-semibold text-slate-200"
+            >
+              <LogIn className="h-3.5 w-3.5" />
+              <span>Sign In</span>
+            </Link>
+            <Link
+              href="/signup"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center justify-center gap-1.5 rounded-xl bg-cyan-500 py-2.5 text-xs font-bold text-slate-950"
+            >
+              <UserPlus className="h-3.5 w-3.5" />
+              <span>Sign Up</span>
+            </Link>
+          </div>
+
+          <div className="pt-1">
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
                 handleOpenAITutor();
               }}
-              className="flex-1 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 py-2.5 text-sm font-semibold text-slate-950"
+              className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 py-2.5 text-sm font-semibold text-slate-950"
             >
               <Bot className="h-4 w-4" />
               <span>Ask AI Tutor</span>

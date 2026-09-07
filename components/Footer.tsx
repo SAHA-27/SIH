@@ -63,6 +63,11 @@ export default function Footer() {
                   Quantum Quizzes & Challenges
                 </Link>
               </li>
+              <li>
+                <Link href="/login" className="text-slate-400 hover:text-cyan-400 transition">
+                  Student Portal (Sign In)
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -95,6 +100,11 @@ export default function Footer() {
               <li>
                 <Link href="/learn/measurement" className="text-slate-400 hover:text-cyan-400 transition">
                   Measurement & Wave Collapse
+                </Link>
+              </li>
+              <li>
+                <Link href="/signup" className="text-cyan-400 hover:text-cyan-300 font-semibold transition">
+                  Create Free Explorer Account →
                 </Link>
               </li>
             </ul>
