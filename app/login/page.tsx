@@ -57,12 +57,12 @@ export default function Login() {
     setRole(demoRole);
     setEmail(
       demoRole === "student"
-        ? "student.explorer@quantum.edu"
+        ? "student@quantumxplore.edu"
         : demoRole === "researcher"
-        ? "researcher@quantum-lab.org"
-        : "prof.quantum@university.edu"
+        ? "researcher@quantumxplore.org"
+        : "prof.quantum@quantumxplore.edu"
     );
-    setPassword("QuantumExplorer2026!");
+    setPassword("Quantumxplore2026!");
     setIsLoading(true);
 
     setTimeout(() => {
@@ -103,7 +103,7 @@ export default function Login() {
               <div>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
                   Welcome to <br />
-                  <span className="gradient-text-cyan">Quantum Explorer</span>
+                  <span className="gradient-text-cyan">Quantumxplore</span>
                 </h2>
                 <p className="mt-2 text-xs sm:text-sm text-slate-300 leading-relaxed">
                   Your gateway to building quantum circuits, simulating state vectors, and mastering quantum physics with AI tutoring.
@@ -137,7 +137,7 @@ export default function Login() {
 
             {/* Bottom Quote & Credits */}
             <div className="pt-6 border-t border-indigo-950/60 text-[11px] text-slate-400">
-              <span className="text-slate-300 font-medium">SIH 2026 College Project Platform</span>
+              <span className="text-slate-300 font-medium">Next-Gen Quantum Learning Platform</span>
               <p className="text-slate-400 mt-0.5">Empowering next-generation quantum innovators.</p>
             </div>
           </div>
@@ -204,7 +204,7 @@ export default function Login() {
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="student.explorer@quantum.edu"
+                      placeholder="student@quantumxplore.edu"
                       required
                       className="w-full rounded-xl border border-indigo-500/30 bg-slate-950/80 pl-10 pr-4 py-2.5 text-sm text-white placeholder-slate-400 focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-400 transition"
                     />
@@ -279,7 +279,7 @@ export default function Login() {
                 </button>
               </form>
 
-              {/* 1-Click Fast Demo Login for SIH Evaluators */}
+              {/* 1-Click Fast Demo Login */}
               <div className="pt-2">
                 <button
                   type="button"
@@ -287,7 +287,7 @@ export default function Login() {
                   className="w-full flex items-center justify-center gap-2 rounded-xl border border-amber-500/40 bg-amber-500/10 py-2.5 text-xs font-bold text-amber-300 transition hover:bg-amber-500/20 hover:border-amber-400 shadow-sm"
                 >
                   <Zap className="h-4 w-4 text-amber-400 fill-amber-400" />
-                  <span>⚡ 1-Click Demo Login (SIH 2026 Presentation Fast Pass)</span>
+                  <span>⚡ 1-Click Fast Demo Login</span>
                 </button>
               </div>
 
@@ -375,7 +375,7 @@ export default function Login() {
                     type="email"
                     value={forgotEmail}
                     onChange={(e) => setForgotEmail(e.target.value)}
-                    placeholder="student.explorer@quantum.edu"
+                    placeholder="student@quantumxplore.edu"
                     required
                     className="w-full rounded-xl border border-indigo-500/30 bg-slate-950 px-4 py-2.5 text-sm text-white placeholder-slate-400 focus:border-cyan-400 focus:outline-none"
                   />

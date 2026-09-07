@@ -13,10 +13,10 @@ export default function Footer() {
                 <Atom className="h-5 w-5 text-white" />
               </div>
               <span className="text-xl font-extrabold text-white tracking-tight">
-                Quantum<span className="text-cyan-400">Explorer</span>
+                Quantum<span className="text-cyan-400">xplore</span>
               </span>
               <span className="rounded-full bg-cyan-500/10 px-2 py-0.5 text-[10px] font-bold text-cyan-400 border border-cyan-500/30">
-                SIH 2026
+                v2.0 AI
               </span>
             </div>
 
@@ -115,7 +115,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-indigo-950 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-center sm:text-left">
             <p className="text-sm font-semibold text-slate-300">
-              Quantum Explorer • SIH 2026
+              Quantumxplore
             </p>
             <p className="text-xs text-slate-500 mt-0.5">
               Learn • Build • Simulate • Explore

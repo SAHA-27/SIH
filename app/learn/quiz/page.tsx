@@ -197,7 +197,7 @@ export default function Quiz() {
             🎉 Quiz Completed!
           </h1>
           <p className="mt-2 text-sm sm:text-base text-slate-300">
-            You have successfully completed the Quantum Explorer Knowledge Assessment.
+            You have successfully completed the Quantumxplore Knowledge Assessment.
           </p>
 
           {/* Score Stats Grid */}

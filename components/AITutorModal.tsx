@@ -66,7 +66,7 @@ export default function AITutorModal() {
     {
       id: "welcome",
       sender: "tutor",
-      text: "Hello, Quantum Explorer! ⚛️ I'm your AI Quantum Tutor. Ask me anything about qubits, superposition, quantum gates, circuits, or the Bloch Sphere.",
+      text: "Hello, Quantumxplorer! ⚛️ I'm your AI Quantum Tutor. Ask me anything about qubits, superposition, quantum gates, circuits, or the Bloch Sphere.",
       timestamp: "Just now",
       suggestedFollowUp: [
         "What is superposition?",
@@ -127,7 +127,7 @@ export default function AITutorModal() {
         responseText = KNOWLEDGE_BASE[matchedKey].answer;
         followUps = KNOWLEDGE_BASE[matchedKey].followUps;
       } else {
-        responseText = `In quantum computing, "${query}" connects directly to quantum mechanical principles. In our Quantum Explorer platform, you can experiment with this concept directly in the Circuit Simulator or review the step-by-step interactive modules under the Learn tab. Would you like to explore how this applies to quantum circuits or mathematical state vectors?`;
+        responseText = `In quantum computing, "${query}" connects directly to quantum mechanical principles. In our Quantumxplore platform, you can experiment with this concept directly in the Circuit Simulator or review the step-by-step interactive modules under the Learn tab. Would you like to explore how this applies to quantum circuits or mathematical state vectors?`;
         followUps = [
           "How does this relate to quantum gates?",
           "Can I simulate this in the Circuit Builder?",
@@ -283,7 +283,7 @@ export default function AITutorModal() {
                 </button>
               </form>
               <div className="mt-2 text-center text-[10px] text-slate-400">
-                SIH 2026 AI Quantum Knowledge Engine • Instant Explanations
+                Quantumxplore AI Knowledge Engine • Instant Explanations
               </div>
             </div>
           </div>

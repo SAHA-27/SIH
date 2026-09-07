@@ -185,7 +185,7 @@ export default function Dashboard() {
           <div className="space-y-2">
             <div className="flex items-center gap-2">
               <span className="rounded-full bg-cyan-500/20 px-3 py-0.5 text-xs font-bold text-cyan-300 border border-cyan-400/30">
-                Student Portal • SIH 2026
+                Student Learning Portal
               </span>
               <span className="flex items-center gap-1 text-xs font-semibold text-amber-300">
                 <Flame className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
@@ -193,7 +193,7 @@ export default function Dashboard() {
               </span>
             </div>
             <h1 className="text-2xl sm:text-4xl font-extrabold text-white">
-              Welcome back, Quantum Explorer 👋
+              Welcome back, Quantumxplorer 👋
             </h1>
             <p className="text-sm sm:text-base text-slate-300 max-w-xl">
               You are making stellar progress! You’ve completed 4 of 6 modules. Continue your journey to master quantum computing.
