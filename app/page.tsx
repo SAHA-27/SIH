@@ -661,6 +661,12 @@ export default function Home() {
                 Start Learning Now
               </Link>
               <Link
+                href="/login"
+                className="rounded-xl border border-cyan-500/40 bg-cyan-950/40 px-7 py-3 text-sm font-bold text-cyan-300 transition hover:bg-cyan-900/60 hover:text-white"
+              >
+                Sign In to Portal
+              </Link>
+              <Link
                 href="/dashboard"
                 className="rounded-xl border border-indigo-400/40 bg-slate-900/80 px-7 py-3 text-sm font-semibold text-slate-200 transition hover:bg-slate-800 hover:text-white"
               >
